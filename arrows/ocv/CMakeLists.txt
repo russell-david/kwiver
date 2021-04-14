@@ -126,3 +126,12 @@ algorithms_create_plugin( kwiver_algo_ocv
 if (KWIVER_ENABLE_TESTS)
   add_subdirectory(tests)
 endif()
+
+if ( KWIVER_ENABLE_PYTHON )
+
+  kwiver_add_python_module(
+     ${CMAKE_CURRENT_SOURCE_DIR}/inpainter.py
+     kwiver/arrows/python
+     inpainter )
+
+endif()
